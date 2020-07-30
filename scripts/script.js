@@ -46,7 +46,7 @@ $(document).ready(function (){
      
     }
   }).fail(function () {
-    alert("You're Offline! Check Your Internet Connection.");
+    alert("Service Unavailable");
   })
 }//End of loadData()
 

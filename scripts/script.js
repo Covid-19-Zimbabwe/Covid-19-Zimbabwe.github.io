@@ -1,7 +1,7 @@
 $(document).ready(function (){
   M.AutoInit();
   loadData();
- //setInterval(loadData, 6000000);
+  setInterval(loadData, 6000000);
   
   function loadData() {
     $.get('data.json', function(data) {
@@ -16,7 +16,7 @@ $(document).ready(function (){
     $('#info').html('');  
     for (let index = 0; index < data.message3.length; index++) {
       $('#info').append("<tr><td>"+data.message3[index]['name']+"</td><td>"+data.message3[index]['cases']+"</td><td>"+data.message3[index]['active']+"</td><td>"+data.message3[index]['death']+"</td><td>"+data.message3[index]['recovered']+"</td></tr>");
-   //$('#info').append("<tr><td>"+data.message3[index]['name']+"</td><td>"+data.message3[index]['cases']+"</td><td>"+data.message3[index]['death']+"</td></tr>");
+   $('#info').append("<tr><td>"+data.message3[index]['name']+"</td><td>"+data.message3[index]['cases']+"</td><td>"+data.message3[index]['death']+"</td></tr>");
 
     }
 
